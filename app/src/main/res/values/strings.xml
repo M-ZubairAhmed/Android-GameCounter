@@ -8,4 +8,9 @@
     <!--menu item names for Game screen-->
     <string name="menu_end_string">End</string>
     <string name="menu_restart_string">Restart</string>
+
+    <!--Views of game string value-->
+    <string name="timer_initial_string">00:00:00</string>
+    <string name="team_a_defstring">Team A</string>
+    <string name="team_b_defstring">Team B</string>
 </resources>

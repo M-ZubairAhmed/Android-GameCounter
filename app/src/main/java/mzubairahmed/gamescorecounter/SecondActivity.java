@@ -13,13 +13,13 @@ public class SecondActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.coordinator_second);
+        setContentView(R.layout.football_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         Bundle intentExtras = getIntent().getExtras();
-        TextView show2 = (TextView) findViewById(R.id.show2);
-        TextView show1 = (TextView) findViewById(R.id.show1);
+        TextView show2 = (TextView) findViewById(R.id.team_b_name_xml);
+        TextView show1 = (TextView) findViewById(R.id.team_a_name_xml);
         show1.setVisibility(TextView.GONE);
         show2.setVisibility(TextView.GONE);
 
@@ -48,10 +48,10 @@ public class SecondActivity extends AppCompatActivity  {
         int id = item.getItemId();
         switch (id){
             case R.id.menu_restart_xml:
-                Toast.makeText(SecondActivity.this,"adf",Toast.LENGTH_SHORT).show();
+                Toast.makeText(SecondActivity.this,"restart",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_end_xml:
-                Toast.makeText(SecondActivity.this,"adf",Toast.LENGTH_SHORT).show();
+                Toast.makeText(SecondActivity.this,"end game",Toast.LENGTH_SHORT).show();
                 break;
 
         }
