@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Game Score Counter</string>
 
+    <!--View of home screen string value-->
+    <string name="home_football_string">Football</string>
+
     <!--menu item names for Home screen-->
     <string name="menu_help_string">Help</string>
     <string name="menu_about_string">About us</string>
@@ -11,6 +14,6 @@
 
     <!--Views of game string value-->
     <string name="timer_initial_string">00:00:00</string>
-    <string name="team_a_defstring">Team A</string>
-    <string name="team_b_defstring">Team B</string>
+    <string name="def_team_a_string">Team A</string>
+    <string name="def_team_b_string">Team B</string>
 </resources>

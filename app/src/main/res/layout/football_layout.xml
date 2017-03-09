@@ -45,7 +45,7 @@
                     android:layout_weight="50"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="@string/team_a_defstring"
+                    android:text="@string/def_team_a_string"
                     android:textAlignment="center"
                     android:textSize="20sp" />
 
@@ -56,7 +56,7 @@
                     android:layout_weight="50"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="@string/team_b_defstring"
+                    android:text="@string/def_team_b_string"
                     android:textAlignment="center"
                     android:textSize="20sp" />
 

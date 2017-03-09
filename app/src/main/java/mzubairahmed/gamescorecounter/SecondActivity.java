@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity  {
@@ -16,19 +15,6 @@ public class SecondActivity extends AppCompatActivity  {
         setContentView(R.layout.football_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        Bundle intentExtras = getIntent().getExtras();
-        TextView show2 = (TextView) findViewById(R.id.team_b_name_xml);
-        TextView show1 = (TextView) findViewById(R.id.team_a_name_xml);
-        show1.setVisibility(TextView.GONE);
-        show2.setVisibility(TextView.GONE);
-
-        if (intentExtras.getBoolean("show1")){
-            show1.setVisibility(TextView.VISIBLE);
-        }
-        else if (intentExtras.getBoolean("show2")){
-            show2.setVisibility(TextView.VISIBLE);
-        }
 
     }
 

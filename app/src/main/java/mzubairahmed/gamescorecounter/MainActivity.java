@@ -7,10 +7,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
-    Intent intent;
+
+    private Intent openActivities;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,25 +20,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.gotoA);
-        textView.setOnClickListener(new View.OnClickListener() {
+        LinearLayout footballActivity = (LinearLayout) findViewById(R.id.goto_football_xml);
+        footballActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("show1",true);
-                startActivity(intent);
+                openActivities = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(openActivities);
             }
         });
 
-        TextView textView1 = (TextView) findViewById(R.id.gotoB);
-        textView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("show2",true);
-                startActivity(intent);
-            }
-        });
     }
 
 

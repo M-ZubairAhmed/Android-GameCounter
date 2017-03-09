@@ -32,20 +32,23 @@
         tools:showIn="@layout/activity_main"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/goto_football_xml"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:id="@+id/gotoA"
-            android:text="Hello World!"/>
+            android:layout_width="match_parent"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_margin="40dp"
-            android:id="@+id/gotoB"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:layout_height="wrap_content"
-            android:text="bye world"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:text="@string/home_football_string"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </LinearLayout>
 
