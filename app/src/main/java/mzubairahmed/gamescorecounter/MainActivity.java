@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +19,22 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.gotos);
+        TextView textView = (TextView) findViewById(R.id.gotoA);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("show1",true);
+                startActivity(intent);
+            }
+        });
+
+        TextView textView1 = (TextView) findViewById(R.id.gotoB);
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("show2",true);
                 startActivity(intent);
             }
         });
@@ -33,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.home_menu, menu);
         return true;
     }
 

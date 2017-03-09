@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Game Score Counter</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--menu item names for Home screen-->
+    <string name="menu_help_string">Help</string>
+    <string name="menu_about_string">About us</string>
 
-    <string name="action_settings">Settings</string>
+    <!--menu item names for Game screen-->
+    <string name="menu_end_string">End</string>
+    <string name="menu_restart_string">Restart</string>
 </resources>

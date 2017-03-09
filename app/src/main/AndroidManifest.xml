@@ -23,7 +23,7 @@
             android:name=".SecondActivity"
             android:label="Second"
             android:theme="@style/AppTheme.NoActionBar">
-            
+
         </activity>
     </application>
 
