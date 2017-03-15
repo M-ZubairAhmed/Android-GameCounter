@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -34,9 +33,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/football_countdown_xml"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:clickable="true"
+                android:background="?android:selectableItemBackground"
+                android:layout_height="wrap_content"
+                android:text="45:50:42"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="60sp" />
+
+            <LinearLayout
+                android:id="@+id/team_name_layout_xml"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/football_countdown_xml">
 
                 <TextView
                     android:id="@+id/team_a_name_xml"
@@ -45,10 +57,9 @@
                     android:layout_weight="50"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:padding="6dp"
                     android:text="@string/def_team_a_string"
-                    android:textAppearance="?android:textAppearance"
                     android:textAlignment="center"
+                    android:textAppearance="?android:textAppearance"
                     android:textColor="@color/colorSecondaryText" />
 
                 <TextView
@@ -58,13 +69,45 @@
                     android:layout_weight="50"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:padding="6dp"
+                    android:text="@string/def_team_b_string"
                     android:textAlignment="center"
                     android:textAppearance="?android:textAppearance"
-                    android:text="@string/def_team_b_string"
                     android:textColor="@color/colorSecondaryText" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/score_layout_xml"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/team_name_layout_xml">
+
+                <TextView
+                    android:id="@+id/team_a_score_xml"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:textSize="80sp"
+                    android:text="20"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryText" />
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/colorDivider"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/team_b_score_xml"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="80sp"
+                    android:layout_weight="50"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryText" />
+
+            </LinearLayout>
+
 
         </RelativeLayout>
 

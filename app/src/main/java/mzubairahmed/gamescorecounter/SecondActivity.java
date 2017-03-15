@@ -7,11 +7,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity  {
 
     public int teamAScore = 0;
+    private TextView countdown_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +21,11 @@ public class SecondActivity extends AppCompatActivity  {
         setContentView(R.layout.football_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        countdown_text = (TextView) findViewById(R.id.football_countdown_xml);
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
             getSupportActionBar().hide();
+            countdown_text.setTextSize(150);
         }
     }
 
