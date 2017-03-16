@@ -47,7 +47,7 @@ public class SecondActivity extends AppCompatActivity  {
                     startTime = SystemClock.uptimeMillis();
                     handler.postDelayed(timerThread,0);
                     countdownStatus = true;
-                    countdown_text.setTex
+                    countdown_text.setTextColor(Color.parseColor("#4CAF50"));
                 }
                 else {
                     timeBuff = timeBuff + timeElapse;
