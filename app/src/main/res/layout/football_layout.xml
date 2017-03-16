@@ -80,14 +80,15 @@
                 android:id="@+id/score_layout_xml"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/team_name_layout_xml">
+                android:layout_below="@+id/team_name_layout_xml"
+                android:weightSum="100">
 
                 <TextView
                     android:id="@+id/team_a_score_xml"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
-                    android:text="20"
+                    android:text="@string/score_initial_string"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="100sp" />
@@ -101,12 +102,66 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
-                    android:text="1"
+                    android:text="@string/score_initial_string"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="100sp" />
 
             </LinearLayout>
+
+            <android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/score_layout_xml"
+                app:columnCount="2"
+                app:rowCount="3">
+
+
+                <TextView
+                    android:gravity="center"
+                    android:text="timer"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    app:layout_columnSpan="2"/>
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/yellow_string"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/yellow_string"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/red_string"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/red_string"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/goal_string"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/goal_string"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+            </android.support.v7.widget.GridLayout>
 
 
         </RelativeLayout>
