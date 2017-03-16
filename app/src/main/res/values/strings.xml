@@ -22,4 +22,7 @@
     <string name="yellow_string">Yellow</string>
     <string name="red_string">Red</string>
     <string name="goal_string">Goal</string>
+    <string name="recent_string">Recent :</string>
+    <string name="last_goal_string">Last goal by XXX at YYYY of ZZZ</string>
+    <string name="last_foul_string">Last foul play from XXX at YYYY of ZZZ</string>
 </resources>

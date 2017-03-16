@@ -35,15 +35,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:columnCount="10"
-            app:rowCount="8">
+            app:rowCount="10">
 
 
             <TextView
                 android:id="@+id/football_countdown_xml"
+                android:layout_marginEnd="@dimen/margin_buttons"
+                android:layout_marginStart="@dimen/margin_buttons"
                 android:background="?android:selectableItemBackground"
                 android:clickable="true"
-                android:layout_marginStart="@dimen/margin_buttons"
-                android:layout_marginEnd="@dimen/margin_buttons"
                 android:gravity="center"
                 android:text="@string/timer_initial_string"
                 android:textColor="@color/colorPrimaryDark"
@@ -53,14 +53,14 @@
                 app:layout_rowWeight="1" />
 
             <TextView
+                android:layout_marginEnd="@dimen/margin_buttons"
+                android:layout_marginStart="@dimen/margin_buttons"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"
                 android:maxWidth="0dp"
-                android:paddingStart="@dimen/margin_buttons"
-                android:layout_marginStart="@dimen/margin_buttons"
-                android:layout_marginEnd="@dimen/margin_buttons"
                 android:paddingEnd="@dimen/margin_buttons"
+                android:paddingStart="@dimen/margin_buttons"
                 android:text="@string/def_team_a_string"
                 android:textAppearance="?android:textAppearance"
                 android:textColor="@color/colorSecondaryText"
@@ -69,14 +69,14 @@
                 app:layout_rowWeight="1" />
 
             <TextView
+                android:layout_marginEnd="@dimen/margin_buttons"
+                android:layout_marginStart="@dimen/margin_buttons"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"
                 android:maxWidth="0dp"
-                android:paddingStart="@dimen/margin_buttons"
-                android:layout_marginStart="@dimen/margin_buttons"
-                android:layout_marginEnd="@dimen/margin_buttons"
                 android:paddingEnd="@dimen/margin_buttons"
+                android:paddingStart="@dimen/margin_buttons"
                 android:text="@string/def_team_b_string"
                 android:textAppearance="?android:textAppearance"
                 android:textColor="@color/colorSecondaryText"
@@ -85,26 +85,26 @@
                 app:layout_rowWeight="1" />
 
             <TextView
-                android:gravity="center"
-                android:text="@string/score_initial_string"
-                android:layout_marginStart="@dimen/margin_buttons"
                 android:layout_marginEnd="@dimen/margin_buttons"
+                android:layout_marginStart="@dimen/margin_buttons"
+                android:gravity="center"
                 android:maxLines="1"
                 android:maxWidth="0dp"
-                android:textColor="@color/colorPrimaryText"
-                android:textSize="100sp"
-                app:layout_columnSpan="5"
-                app:layout_columnWeight="50"
-                app:layout_rowWeight="1" />
-
-            <TextView
-                android:gravity="center"
                 android:text="@string/score_initial_string"
-                android:layout_marginStart="@dimen/margin_buttons"
-                android:layout_marginEnd="@dimen/margin_buttons"
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="100sp"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:layout_marginEnd="@dimen/margin_buttons"
+                android:layout_marginStart="@dimen/margin_buttons"
+                android:gravity="center"
                 android:maxLines="1"
+                android:text="@string/score_initial_string"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="100sp"
                 app:layout_columnSpan="5"
                 app:layout_columnWeight="50"
                 app:layout_rowWeight="1" />
@@ -159,10 +159,66 @@
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_margin="@dimen/margin_buttons"
                 android:gravity="center"
-                android:text="@string/goal_string"
                 android:padding="@dimen/margin_buttons"
+                android:text="@string/goal_string"
                 app:layout_columnSpan="5"
                 app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:layout_marginEnd="@dimen/margin_buttons"
+                android:layout_marginStart="@dimen/margin_buttons"
+                android:paddingEnd="@dimen/padding_start"
+                android:paddingStart="@dimen/padding_start"
+                android:text="@string/recent_string"
+                android:textColor="@color/colorSecondaryText"
+                app:layout_columnSpan="10"
+                app:layout_columnWeight="1" />
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="@dimen/margin_buttons"
+                android:layout_marginStart="@dimen/margin_buttons"
+                android:contentDescription="@string/last_goal_string"
+                android:paddingEnd="@dimen/padding_start"
+                android:paddingStart="@dimen/padding_start"
+                android:src="@drawable/football_icon" />
+
+            <TextView
+                android:layout_marginEnd="@dimen/margin_buttons"
+                android:layout_marginStart="@dimen/margin_buttons"
+                android:ellipsize="start"
+                android:maxLines="2"
+                android:maxWidth="280dp"
+                android:paddingEnd="@dimen/padding_start"
+                android:paddingStart="@dimen/padding_start"
+                android:text="@string/last_goal_string"
+                app:layout_columnSpan="9"
+                app:layout_gravity="center_vertical"
+                app:layout_rowWeight="1" />
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="@dimen/margin_buttons"
+                android:layout_marginStart="@dimen/margin_buttons"
+                android:contentDescription="@string/last_foul_string"
+                android:paddingEnd="@dimen/padding_start"
+                android:paddingStart="@dimen/padding_start"
+                android:src="@drawable/wistle_icon" />
+
+            <TextView
+                android:layout_marginEnd="@dimen/margin_buttons"
+                android:layout_marginStart="@dimen/margin_buttons"
+                android:ellipsize="start"
+                android:maxLines="2"
+                android:maxWidth="280dp"
+                android:paddingEnd="@dimen/padding_start"
+                android:paddingStart="@dimen/padding_start"
+                android:text="@string/last_foul_string"
+                app:layout_columnSpan="9"
+                app:layout_gravity="center_vertical"
                 app:layout_rowWeight="1" />
 
         </android.support.v7.widget.GridLayout>

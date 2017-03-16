@@ -8,4 +8,5 @@
 
     <!--dimensions for football layout-->
     <dimen name="margin_buttons">8dp</dimen>
+    <dimen name="padding_start">4dp</dimen>
 </resources>
