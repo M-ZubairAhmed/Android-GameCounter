@@ -36,7 +36,7 @@ public class SecondActivity extends AppCompatActivity  {
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
             getSupportActionBar().hide();
-            countdown_text.setTextSize(150);
+//            countdown_text.setTextSize(150);
         }
 
         countdown_text.setOnClickListener(new View.OnClickListener() {
