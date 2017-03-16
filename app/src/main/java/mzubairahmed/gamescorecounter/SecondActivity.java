@@ -1,6 +1,7 @@
 package mzubairahmed.gamescorecounter;
 
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -45,6 +46,14 @@ public class SecondActivity extends AppCompatActivity  {
                 if (!countdownStatus){
                     startTime = SystemClock.uptimeMillis();
                     handler.postDelayed(timerThread,0);
+                    countdownStatus = true;
+                    countdown_text.setTex
+                }
+                else {
+                    timeBuff = timeBuff + timeElapse;
+                    handler.removeCallbacks(timerThread);
+                    countdownStatus = false;
+                    countdown_text.setTextColor(Color.RED);
                 }
             }
         });
