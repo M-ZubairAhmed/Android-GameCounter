@@ -16,15 +16,14 @@ import android.widget.Toast;
 public class SecondActivity extends AppCompatActivity  {
 
     public int teamAScore = 0;
-    private boolean countdownStatus = false;
+    public int teamBScore = 0;
+    private boolean timerStatus = false;
     private long startTime = 0L;
     private long timeElapse = 0L;
     private long timeUpdated = 0L;
     private long timeBuff = 0L;
-    private StringBuilder secS = new StringBuilder();
-    private StringBuilder minS = new StringBuilder();
     private Handler handler = new Handler();
-    private TextView countdown_text;
+    private TextView timer_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,31 +31,33 @@ public class SecondActivity extends AppCompatActivity  {
         setContentView(R.layout.football_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        countdown_text = (TextView) findViewById(R.id.football_countdown_xml);
+        timer_text = (TextView) findViewById(R.id.football_timer_xml);
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
             getSupportActionBar().hide();
-//            countdown_text.setTextSize(150);
+//            timer_text.setTextSize(150);
         }
 
-        countdown_text.setOnClickListener(new View.OnClickListener() {
+        timer_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Start or resume countdown
-                if (!countdownStatus){
+                if (!timerStatus){
                     startTime = SystemClock.uptimeMillis();
                     handler.postDelayed(timerThread,0);
-                    countdownStatus = true;
-                    countdown_text.setTextColor(Color.parseColor("#4CAF50"));
+                    timerStatus = true;
+                    timer_text.setTextColor(Color.parseColor("#4CAF50"));
                 }
                 else {
                     timeBuff = timeBuff + timeElapse;
                     handler.removeCallbacks(timerThread);
-                    countdownStatus = false;
-                    countdown_text.setTextColor(Color.RED);
+                    timerStatus = false;
+                    timer_text.setTextColor(Color.RED);
                 }
             }
         });
+
+        
     }
 
     private Runnable timerThread = new Runnable() {
@@ -66,7 +67,7 @@ public class SecondActivity extends AppCompatActivity  {
             timeUpdated = timeBuff + timeElapse;
             int sec = (int) (timeUpdated / 1000);
             int min = sec / 60;
-            countdown_text.setText(String.format("%02d",min) + " : " + String.format("%02d",sec));
+            timer_text.setText(String.format("%02d",min) + " : " + String.format("%02d",sec));
             handler.postDelayed(this,0);
         }
     };
@@ -92,7 +93,6 @@ public class SecondActivity extends AppCompatActivity  {
             case R.id.menu_end_xml:
                 Toast.makeText(SecondActivity.this,"end game",Toast.LENGTH_SHORT).show();
                 break;
-
         }
         return super.onOptionsItemSelected(item);
     }
