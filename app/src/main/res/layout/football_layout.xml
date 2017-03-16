@@ -29,142 +29,110 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="mzubairahmed.gamescorecounter.SecondActivity">
 
-        <RelativeLayout
+        <android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/grid"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:columnCount="10"
+            app:rowCount="8">
+
 
             <TextView
                 android:id="@+id/football_countdown_xml"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
                 android:clickable="true"
+                android:gravity="center"
                 android:text="@string/timer_initial_string"
-                android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
-                android:textSize="60sp" />
+                android:textSize="60sp"
+                app:layout_columnSpan="10"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
 
-            <LinearLayout
-                android:id="@+id/team_name_layout_xml"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/football_countdown_xml">
+            <TextView
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/def_team_a_string"
+                android:textAppearance="?android:textAppearance"
+                android:textColor="@color/colorSecondaryText"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
 
-                <TextView
-                    android:id="@+id/team_a_name_xml"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="@string/def_team_a_string"
-                    android:textAlignment="center"
-                    android:textAppearance="?android:textAppearance"
-                    android:textColor="@color/colorSecondaryText" />
+            <TextView
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/def_team_b_string"
+                android:textAppearance="?android:textAppearance"
+                android:textColor="@color/colorSecondaryText"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
 
-                <TextView
-                    android:id="@+id/team_b_name_xml"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="@string/def_team_b_string"
-                    android:textAlignment="center"
-                    android:textAppearance="?android:textAppearance"
-                    android:textColor="@color/colorSecondaryText" />
+            <TextView
+                android:gravity="center"
+                android:text="@string/score_initial_string"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="100sp"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
 
-            </LinearLayout>
+            <TextView
+                android:gravity="center"
+                android:text="@string/score_initial_string"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="100sp"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
 
-            <LinearLayout
-                android:id="@+id/score_layout_xml"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/team_name_layout_xml"
-                android:weightSum="100">
+            <TextView
+                android:gravity="center"
+                android:text="@string/yellow_string"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
 
-                <TextView
-                    android:id="@+id/team_a_score_xml"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:text="@string/score_initial_string"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="100sp" />
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorDivider"/>
+            <TextView
+                android:gravity="center"
+                android:text="@string/yellow_string"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
 
-                <TextView
-                    android:id="@+id/team_b_score_xml"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:text="@string/score_initial_string"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="100sp" />
+            <TextView
+                android:gravity="center"
+                android:text="@string/red_string"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
 
-            </LinearLayout>
+            <TextView
+                android:gravity="center"
+                android:text="@string/red_string"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
 
-            <android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/grid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/score_layout_xml"
-                app:columnCount="2"
-                app:rowCount="3">
+            <TextView
+                android:gravity="center"
+                android:text="@string/goal_string"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
 
+            <TextView
+                android:gravity="center"
+                android:text="@string/goal_string"
+                app:layout_columnSpan="5"
+                app:layout_columnWeight="50"
+                app:layout_rowWeight="1" />
 
-                <TextView
-                    android:gravity="center"
-                    android:text="timer"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1"
-                    app:layout_columnSpan="2"/>
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/yellow_string"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/yellow_string"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/red_string"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/red_string"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/goal_string"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/goal_string"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-            </android.support.v7.widget.GridLayout>
-
-
-        </RelativeLayout>
+        </android.support.v7.widget.GridLayout>
 
     </ScrollView>
 
