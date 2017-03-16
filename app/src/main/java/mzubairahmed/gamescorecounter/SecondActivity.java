@@ -66,7 +66,7 @@ public class SecondActivity extends AppCompatActivity  {
             timeUpdated = timeBuff + timeElapse;
             int sec = (int) (timeUpdated / 1000);
             int min = sec / 60;
-            countdown_text.setText(String.format("%02d",min) + ":" + String.format("%02d",sec));
+            countdown_text.setText(String.format("%02d",min) + " : " + String.format("%02d",sec));
             handler.postDelayed(this,0);
         }
     };
