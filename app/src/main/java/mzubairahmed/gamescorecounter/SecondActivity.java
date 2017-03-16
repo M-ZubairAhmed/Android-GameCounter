@@ -2,17 +2,27 @@ package mzubairahmed.gamescorecounter;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity  {
 
     public int teamAScore = 0;
+    private boolean countdownStatus = false;
+    private long startTime = 0L;
+    private long timeElapse = 0L;
+    private long timeUpdated = 0L;
+    private long timeBuff = 0L;
+    private StringBuilder secS = new StringBuilder();
+    private StringBuilder minS = new StringBuilder();
+    private Handler handler = new Handler();
     private TextView countdown_text;
 
     @Override
@@ -27,7 +37,30 @@ public class SecondActivity extends AppCompatActivity  {
             getSupportActionBar().hide();
             countdown_text.setTextSize(150);
         }
+
+        countdown_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Start or resume countdown
+                if (!countdownStatus){
+                    startTime = SystemClock.uptimeMillis();
+                    handler.postDelayed(timerThread,0);
+                }
+            }
+        });
     }
+
+    private Runnable timerThread = new Runnable() {
+        @Override
+        public void run() {
+            timeElapse = SystemClock.uptimeMillis() - startTime;
+            timeUpdated = timeBuff + timeElapse;
+            int sec = (int) (timeUpdated / 1000);
+            int min = sec / 60;
+            countdown_text.setText(String.format("%02d",min) + ":" + String.format("%02d",sec));
+            handler.postDelayed(this,0);
+        }
+    };
 
 
     @Override
