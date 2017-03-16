@@ -39,9 +39,9 @@
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
                 android:clickable="true"
-                android:text="45:50:42"
+                android:text="@string/timer_initial_string"
                 android:textAlignment="center"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorPrimary"
                 android:textSize="60sp" />
 
             <LinearLayout

@@ -13,7 +13,7 @@
     <string name="menu_restart_string">Restart</string>
 
     <!--Views of game string value-->
-    <string name="timer_initial_string">00:00:00</string>
+    <string name="timer_initial_string">00:00</string>
     <string name="def_team_a_string">Team A</string>
     <string name="def_team_b_string">Team B</string>
 </resources>
