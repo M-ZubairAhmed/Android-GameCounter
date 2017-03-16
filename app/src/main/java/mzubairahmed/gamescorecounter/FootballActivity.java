@@ -10,10 +10,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SecondActivity extends AppCompatActivity  {
+public class FootballActivity extends AppCompatActivity  {
 
     public int teamAScore = 0;
     public int teamBScore = 0;
@@ -57,7 +58,26 @@ public class SecondActivity extends AppCompatActivity  {
             }
         });
 
-        
+        Button teamAGoal = (Button) findViewById(R.id.team_a_goal_xml);
+        final TextView teamAScore_view = (TextView) findViewById(R.id.team_a_score_xml);
+        teamAScore_view.setText(String.valueOf(teamAScore));
+        teamAGoal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                teamAScore++;
+                teamAScore_view.setText(String.valueOf(teamAScore));
+            }
+        });
+        Button teamBGoal = (Button) findViewById(R.id.team_b_goal_xml);
+        final TextView teamBScore_view = (TextView) findViewById(R.id.team_b_score_xml);
+        teamBScore_view.setText(String.valueOf(teamBScore));
+        teamBGoal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                teamBScore++;
+                teamBScore_view.setText(String.valueOf(teamBScore));
+            }
+        });
     }
 
     private Runnable timerThread = new Runnable() {
@@ -88,10 +108,10 @@ public class SecondActivity extends AppCompatActivity  {
         int id = item.getItemId();
         switch (id){
             case R.id.menu_restart_xml:
-                Toast.makeText(SecondActivity.this,"restart",Toast.LENGTH_SHORT).show();
+                Toast.makeText(FootballActivity.this,"restart",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_end_xml:
-                Toast.makeText(SecondActivity.this,"end game",Toast.LENGTH_SHORT).show();
+                Toast.makeText(FootballActivity.this,"end game",Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

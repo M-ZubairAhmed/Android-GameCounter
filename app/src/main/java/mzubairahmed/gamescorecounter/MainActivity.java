@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         footballActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivities = new Intent(MainActivity.this, SecondActivity.class);
+                openActivities = new Intent(MainActivity.this, FootballActivity.class);
                 startActivity(openActivities);
             }
         });

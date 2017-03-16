@@ -19,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
-            android:label="Second"
+            android:name=".FootballActivity"
+            android:label="Football Scorecard"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
