@@ -39,7 +39,7 @@
 
 
             <TextView
-                android:id="@+id/football_countdown_xml"
+                android:id="@+id/football_timer_xml"
                 android:layout_marginEnd="@dimen/margin_buttons"
                 android:layout_marginStart="@dimen/margin_buttons"
                 android:background="?android:selectableItemBackground"
@@ -53,6 +53,7 @@
                 app:layout_rowWeight="1" />
 
             <TextView
+                android:id="@+id/team_a_name_xml"
                 android:layout_marginEnd="@dimen/margin_buttons"
                 android:layout_marginStart="@dimen/margin_buttons"
                 android:ellipsize="end"
@@ -69,6 +70,7 @@
                 app:layout_rowWeight="1" />
 
             <TextView
+                android:id="@+id/team_b_name_xml"
                 android:layout_marginEnd="@dimen/margin_buttons"
                 android:layout_marginStart="@dimen/margin_buttons"
                 android:ellipsize="end"
@@ -85,6 +87,7 @@
                 app:layout_rowWeight="1" />
 
             <TextView
+                android:id="@+id/team_a_score_xml"
                 android:layout_marginEnd="@dimen/margin_buttons"
                 android:layout_marginStart="@dimen/margin_buttons"
                 android:gravity="center"
@@ -98,6 +101,7 @@
                 app:layout_rowWeight="1" />
 
             <TextView
+                android:id="@+id/team_b_score_xml"
                 android:layout_marginEnd="@dimen/margin_buttons"
                 android:layout_marginStart="@dimen/margin_buttons"
                 android:gravity="center"
@@ -110,6 +114,7 @@
                 app:layout_rowWeight="1" />
 
             <TextView
+                android:id="@+id/team_a_yell_xml"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_margin="@dimen/margin_buttons"
                 android:gravity="center"
@@ -120,6 +125,7 @@
                 app:layout_rowWeight="1" />
 
             <TextView
+                android:id="@+id/team_b_yell_xml"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_margin="@dimen/margin_buttons"
                 android:gravity="center"
@@ -129,6 +135,7 @@
                 app:layout_rowWeight="1" />
 
             <TextView
+                android:id="@+id/team_a_red_xml"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_margin="@dimen/margin_buttons"
                 android:gravity="center"
@@ -138,6 +145,7 @@
                 app:layout_rowWeight="1" />
 
             <TextView
+                android:id="@+id/team_b_red_xml"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_margin="@dimen/margin_buttons"
                 android:gravity="center"
@@ -147,6 +155,7 @@
                 app:layout_rowWeight="1" />
 
             <Button
+                android:id="@+id/team_a_goal_xml"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_margin="@dimen/margin_buttons"
                 android:gravity="center"
@@ -156,6 +165,7 @@
                 app:layout_rowWeight="1" />
 
             <Button
+                android:id="@+id/team_b_goal_xml"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_margin="@dimen/margin_buttons"
                 android:gravity="center"
@@ -176,8 +186,8 @@
                 app:layout_columnWeight="1" />
 
             <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_marginEnd="@dimen/margin_buttons"
                 android:layout_marginStart="@dimen/margin_buttons"
                 android:contentDescription="@string/last_goal_string"
@@ -186,6 +196,7 @@
                 android:src="@drawable/football_icon" />
 
             <TextView
+                android:id="@+id/last_goal_xml"
                 android:layout_marginEnd="@dimen/margin_buttons"
                 android:layout_marginStart="@dimen/margin_buttons"
                 android:ellipsize="start"
@@ -199,8 +210,8 @@
                 app:layout_rowWeight="1" />
 
             <ImageView
-                android:layout_width="26dp"
-                android:layout_height="26dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_marginEnd="@dimen/margin_buttons"
                 android:layout_marginStart="@dimen/margin_buttons"
                 android:contentDescription="@string/last_foul_string"
@@ -209,6 +220,7 @@
                 android:src="@drawable/wistle_icon" />
 
             <TextView
+                android:id="@+id/last_foul_xml"
                 android:layout_marginEnd="@dimen/margin_buttons"
                 android:layout_marginStart="@dimen/margin_buttons"
                 android:ellipsize="start"
